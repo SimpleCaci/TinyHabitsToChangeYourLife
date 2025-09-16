@@ -4,10 +4,20 @@ body {
   background-color: #f0f0f0;
 }
 
-button {
-  padding: 10px 20px;
-  background: blue;
-  color: white;
-  border: none;
-  cursor: pointer;
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /* 3 columns, each 100px */
+  grid-template-rows: repeat(3, 100px);    /* 3 rows, each 100px */
+  gap: 10px;                               /* space between boxes */
+  justify-content: center;                 /* center grid horizontally */
+  margin-top: 50px;
+}
+
+.habitTask {
+  background: lightblue;
+  display: flex;
+  align-items: center;  /* center text vertically */
+  justify-content: center; /* center text horizontally */
+  border: 2px solid #333;
+  font-weight: bold;
 }
