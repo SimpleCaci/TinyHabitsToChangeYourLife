@@ -1,23 +1,44 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f0f0f0;
-}
-
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(3, 100px); /* 3 columns, each 100px */
-  grid-template-rows: repeat(3, 100px);    /* 3 rows, each 100px */
-  gap: 10px;                               /* space between boxes */
-  justify-content: center;                 /* center grid horizontally */
+  grid-template-columns: repeat(3, 1fr);  /* Always 3 columns */
+  gap: 10px;
+  justify-content: center;
   margin-top: 50px;
+  max-width: 900px;                       /* Keeps grid from stretching too far */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .habitTask {
+  width: 100%;                  /* Fill each grid cell */
+  padding: 15px;
   background: lightblue;
-  display: flex;
-  align-items: center;  /* center text vertically */
-  justify-content: center; /* center text horizontally */
-  border: 2px solid #333;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
   font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.habitTask:hover {
+  background: dodgerblue;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* On small screens: make it 2 per row, then 1 per row */
+@media (max-width: 700px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
 }
