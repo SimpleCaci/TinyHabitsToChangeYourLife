@@ -30,6 +30,14 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Highlighted (clicked) state */
+.habitTask.done {
+  background: lightgreen;
+  color: black;
+  transform: none;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.4);
+}
+
 /* On small screens: make it 2 per row, then 1 per row */
 @media (max-width: 700px) {
   .gridContainer {
