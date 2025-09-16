@@ -10,7 +10,7 @@
 }
 
 .habitTask {
-  width: 100%;                  /* Fill each grid cell */
+  width: 100%;
   padding: 15px;
   background: lightblue;
   border: none;
@@ -19,12 +19,11 @@
   text-align: center;
   font-size: 16px;
   font-weight: bold;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease; /* smooth fade */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .habitTask:hover {
-  background: dodgerblue;
   color: white;
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
@@ -37,6 +36,7 @@
   transform: none;
   box-shadow: 0 4px 8px rgba(0, 128, 0, 0.4);
 }
+
 
 /* On small screens: make it 2 per row, then 1 per row */
 @media (max-width: 700px) {
